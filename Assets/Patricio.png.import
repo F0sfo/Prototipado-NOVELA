@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Placeholder.png-49bf37bd92ae8829617f2a8b0c22f53e.stex"
+path="res://.import/Patricio.png-252e57f95edaf665b22f1052c4dc1008.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Placeholder.png"
-dest_files=[ "res://.import/Placeholder.png-49bf37bd92ae8829617f2a8b0c22f53e.stex" ]
+source_file="res://Assets/Patricio.png"
+dest_files=[ "res://.import/Patricio.png-252e57f95edaf665b22f1052c4dc1008.stex" ]
 
 [params]
 

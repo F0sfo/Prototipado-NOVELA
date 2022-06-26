@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Batman Hush - Corregido.jpg-63f703118a2e53cba58a636041dfcf92.s3tc.stex"
-path.etc2="res://.import/Batman Hush - Corregido.jpg-63f703118a2e53cba58a636041dfcf92.etc2.stex"
+path.s3tc="res://.import/Batman Hush - Corregido.jpg-e60ff5e80fe7fd75ba38e04a91d41212.s3tc.stex"
+path.etc2="res://.import/Batman Hush - Corregido.jpg-e60ff5e80fe7fd75ba38e04a91d41212.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Batman Hush - Corregido.jpg"
-dest_files=[ "res://.import/Batman Hush - Corregido.jpg-63f703118a2e53cba58a636041dfcf92.s3tc.stex", "res://.import/Batman Hush - Corregido.jpg-63f703118a2e53cba58a636041dfcf92.etc2.stex" ]
+source_file="res://Assets/Batman Hush - Corregido.jpg"
+dest_files=[ "res://.import/Batman Hush - Corregido.jpg-e60ff5e80fe7fd75ba38e04a91d41212.s3tc.stex", "res://.import/Batman Hush - Corregido.jpg-e60ff5e80fe7fd75ba38e04a91d41212.etc2.stex" ]
 
 [params]
 
