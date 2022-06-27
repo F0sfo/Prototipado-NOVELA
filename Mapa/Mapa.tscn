@@ -1,20 +1,165 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Controller.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets/Batman Hush - Corregido.jpg" type="Texture" id=2]
+[ext_resource path="res://Tiles/Vector/texture_09.svg" type="Texture" id=2]
+[ext_resource path="res://Niño.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Cajas flotando.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Environment" id=4]
+background_mode = 2
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_texture = ExtResource( 2 )
 
-[node name="World" type="Spatial"]
+[sub_resource type="SpatialMaterial" id=2]
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "aparicion"
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.5, 2.3, 2.5, 3, 3.5, 4.2, 4.4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, true, false, true, false, true, false, true ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "aparicion"
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.5, 2.3, 2.5, 3, 3.5, 4.2, 4.4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, true, false, true, false, true, false, true ]
+}
+
+[node name="Mapa" type="Spatial"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 4 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 8.77516, 0 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 24.4547, 0 )
+light_energy = 1.274
 
-[node name="CSGBox" type="CSGBox" parent="."]
-transform = Transform( 0.743303, 0, 0, 0, 1, 0, 0, 0, 14.936, 0, 0, 0 )
+[node name="CSGBox2" type="CSGBox" parent="."]
+transform = Transform( -0.0135246, -1.00898, 0, 0.447024, -0.0201761, -5.34684e-05, 0.00141803, -6.40017e-05, 22.2719, 13.4261, 8.98486, 0 )
 width = 38.5079
 material = SubResource( 1 )
 
+[node name="CSGBox5" type="CSGBox" parent="."]
+transform = Transform( -0.0135368, -1.00894, -0.199021, 0.447024, -0.0201761, -5.34684e-05, 0.00129712, -0.00908018, 22.271, -13.2319, 8.98486, -1.07411 )
+width = 38.5079
+material = SubResource( 1 )
+
+[node name="CSGBox3" type="CSGBox" parent="."]
+transform = Transform( 0.00089789, -0.00264857, 14.6512, 0.447024, -0.0201761, -5.34684e-05, 0.0135301, 1.00897, 0.0874603, 0.0471706, 8.98486, -22.4646 )
+width = 38.5079
+material = SubResource( 2 )
+
+[node name="CSGBox6" type="CSGBox" parent="."]
+transform = Transform( 0.000568968, -0.00167833, 9.28406, 0.447024, -0.0201761, -5.34684e-05, 0.0135301, 1.00897, 0.0874603, -5.26546, 8.98486, 11.8585 )
+use_collision = true
+width = 38.5079
+material = SubResource( 2 )
+
+[node name="CSGBox7" type="CSGBox" parent="."]
+transform = Transform( 0.000568968, -0.00167833, 9.28406, 0.447024, -0.0201761, -5.34684e-05, 0.0135301, 1.00897, 0.0874603, 4.8006, 8.98486, -9.59105 )
+use_collision = true
+width = 38.5079
+material = SubResource( 2 )
+
+[node name="CSGBox4" type="CSGBox" parent="."]
+transform = Transform( 0.0010374, 0.00775879, 14.6513, 0.447024, -0.0201761, -5.34684e-05, 0.0135201, 1.00894, -0.0636671, 0.0471706, 8.98486, 21.0273 )
+width = 38.5079
+material = SubResource( 2 )
+
+[node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 0.743303, 0, 0, 0, 1, 0, 0, 0, 21.9662, 0, 0, 0 )
+use_collision = true
+width = 38.5079
+material = SubResource( 3 )
+
 [node name="FirstPerson" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.21973, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.15953, 2.21973, 16.0826 )
+
+[node name="Niño" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.00816809, 0, -0.999967, 0, 1, 0, 0.999967, 0, 0.00816809, 11.8333, 1.73489, -13.0531 )
+
+[node name="Cajas flotando" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.88429, 0.0990734, 8.36819 )
+
+[node name="Cajas flotando2" parent="." instance=ExtResource( 4 )]
+transform = Transform( -0.532596, 0, 0.84637, 0, 1, 0, -0.84637, 0, -0.532596, 0.109053, 0.0990734, 2.79664 )
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( -0.301095, 0.834955, -0.460643, 0.124579, 0.513362, 0.849082, 0.945422, 0.198268, -0.258588, 7.28444, 8.8652, -15.3901 )
+visible = false
+light_energy = 11.376
+spot_range = 10.3041
+spot_angle = 34.2821
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpotLight"]
+autoplay = "aparicion"
+anims/RESET = SubResource( 5 )
+anims/aparicion = SubResource( 6 )
+
+[node name="SpotLight2" type="SpotLight" parent="."]
+transform = Transform( -0.696961, -0.563803, 0.443139, 0.124579, 0.513362, 0.849082, -0.706205, 0.646983, -0.287555, -1.57743, 12.8988, 2.26742 )
+visible = false
+light_energy = 11.758
+spot_range = 14.6873
+spot_angle = 55.5005
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpotLight2"]
+autoplay = "aparicion"
+anims/RESET = SubResource( 7 )
+anims/aparicion = SubResource( 8 )

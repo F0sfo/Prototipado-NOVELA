@@ -1,0 +1,211 @@
+[gd_scene load_steps=11 format=2]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( -2.57791, 4.15819, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "movimiento"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -2.57791, 4.15819, 0 ), Vector3( -2.57791, 4.80082, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( -2.57791, 4.92937, -3.88759 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "movimiento"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -2.57791, 4.92937, -3.88759 ), Vector3( -2.57791, 5.42978, -3.88759 ), Vector3( -2.57791, 6.03079, -3.88759 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( -2.57791, 7.40801, -4.34598 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "movimiento"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -2.57791, 7.40801, -4.34598 ), Vector3( -1.76514, 7.40801, -4.34598 ), Vector3( -1.18759, 6.766, -4.34598 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0.730316, 3.37425, -5.63707 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "movimiento"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.730316, 3.37425, -5.63707 ), Vector3( 0.730316, 3.79188, -5.63707 ), Vector3( 0.730316, 3.79188, -5.15607 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( -5.22656, 7.69896, -0.605258 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "movimiento"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -5.22656, 7.69896, -0.605258 ), Vector3( -5.22656, 9.05292, -0.605258 ), Vector3( -5.22656, 5.21348, -0.605258 ) ]
+}
+
+[node name="Cajas flotando" type="Spatial"]
+
+[node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 0.736794, 0, 0, 0, 0.756237, 0, 0, 0, 0.790373, 0, 1.78032, 0 )
+
+[node name="CSGBox4" type="CSGBox" parent="."]
+transform = Transform( 0.508059, 0, 0, 0, 0.495254, 0.256584, 0, -0.267375, 0.563727, -2.57791, 4.15819, 0 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CSGBox4"]
+autoplay = "movimiento"
+anims/RESET = SubResource( 1 )
+anims/movimiento = SubResource( 2 )
+
+[node name="CSGBox6" type="CSGBox" parent="."]
+transform = Transform( 1.03124, -0.220585, 0.465075, 0, 0.515267, 0.266952, -1.08632, -0.2094, 0.441494, -2.57791, 4.92937, -3.88759 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CSGBox6"]
+autoplay = "movimiento"
+anims/RESET = SubResource( 3 )
+anims/movimiento = SubResource( 4 )
+
+[node name="CSGBox5" type="CSGBox" parent="."]
+transform = Transform( -0.234581, -0.494, 0.116064, 0.387747, -0.262674, -0.256544, 0.229669, -0.0610955, 0.551668, -2.57791, 7.40801, -4.34598 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CSGBox5"]
+autoplay = "movimiento"
+anims/RESET = SubResource( 5 )
+anims/movimiento = SubResource( 6 )
+
+[node name="CSGBox7" type="CSGBox" parent="."]
+transform = Transform( -0.290645, 0.408761, 0.205, -0.347709, -0.382032, 0.193031, 0.229669, -0.0610955, 0.551668, 0.730316, 3.37425, -5.63707 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CSGBox7"]
+autoplay = "movimiento"
+anims/RESET = SubResource( 7 )
+anims/movimiento = SubResource( 8 )
+
+[node name="CSGBox3" type="CSGBox" parent="."]
+transform = Transform( 0.465887, 0, -0.220853, 0, 0.536741, 0, 0.20655, 0, 0.498149, -2.64908, 1.49262, -2.3343 )
+
+[node name="CSGBox10" type="CSGBox" parent="."]
+transform = Transform( 0.481146, 0.0585566, -0.169472, -0.157548, 0.332923, -0.392826, 0.0582297, 0.416922, 0.337485, -6.05702, 1.74901, -0.658237 )
+
+[node name="CSGBox8" type="CSGBox" parent="."]
+transform = Transform( 0.458313, 0, 0.238284, 0, 1.23462, 0, -0.222852, 0, 0.490051, -5.22656, 2.04724, -5.2361 )
+
+[node name="CSGBox9" type="CSGBox" parent="."]
+transform = Transform( 0.771232, 0.762988, 0.0149436, -0.766378, 0.753043, 0.181088, 0.0987541, -0.114672, 1.28863, -5.22656, 7.69896, -0.605258 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CSGBox9"]
+autoplay = "movimiento"
+anims/RESET = SubResource( 9 )
+anims/movimiento = SubResource( 10 )

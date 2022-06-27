@@ -41,7 +41,7 @@ var dialogue_1  = [
 		"Expression": "Neutral",
 		"Position": "1",
 		"Choices": ["Me quedé haciendo tarea.", "Como todas las noches desde que tengo recuerdo, Ada."],
-		"Text": "¿Otra vez no dormiste anoche?",
+		"Text": "¿No dormiste anoche?",
 	},
 ]
 
@@ -65,7 +65,7 @@ var after_choice_1 = [
 		"Expression": "Neutral",
 		"Position": "1",
 		"Choices": ["", ""],
-		"Text": "¡Hey, hablando de su-",
+		"Text": "¡Hey!hablando de su-",
 	},
 ]
 
