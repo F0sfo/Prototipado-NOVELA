@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/y2mate.com - Funk Guitar Instrumental  Casual Prod Pacific.mp3-87c4a2dd0338e1725321d805194fe162.mp3str"
+
+[deps]
+
+source_file="res://Assets/y2mate.com - Funk Guitar Instrumental  Casual Prod Pacific.mp3"
+dest_files=[ "res://.import/y2mate.com - Funk Guitar Instrumental  Casual Prod Pacific.mp3-87c4a2dd0338e1725321d805194fe162.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

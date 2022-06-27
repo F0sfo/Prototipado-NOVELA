@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Controller.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tiles/Vector/texture_09.svg" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Mapa/Control2.gd" type="Script" id=6]
 [ext_resource path="res://Assets/Oswald-VariableFont_wght.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Mapa/Mapa.gd" type="Script" id=8]
+[ext_resource path="res://Assets/y2mate.com - Ambiente de Cementerio  Sonido Ambiente de Terror (1).mp3" type="AudioStream" id=9]
 
 [sub_resource type="Environment" id=4]
 background_mode = 2
@@ -37,6 +38,70 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=6]
+resource_name = "aparicion"
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.5, 2.3, 2.5, 3, 3.5, 4.2, 4.4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, true, false, true, false, true, false, true ]
+}
+
+[sub_resource type="Animation" id=13]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "aparicion"
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.5, 2.3, 2.5, 3, 3.5, 4.2, 4.4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, true, false, true, false, true, false, true ]
+}
+
+[sub_resource type="Animation" id=15]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=16]
 resource_name = "aparicion"
 length = 5.0
 loop = true
@@ -190,11 +255,14 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.88429, 0.0990734, 8.36819 )
 
 [node name="Cajas flotando2" parent="." instance=ExtResource( 4 )]
 transform = Transform( -0.532596, 0, 0.84637, 0, 1, 0, -0.84637, 0, -0.532596, 0.109053, 0.0990734, 2.79664 )
-visible = false
+
+[node name="Cajas flotando3" parent="." instance=ExtResource( 4 )]
+transform = Transform( -0.999794, 0, 0.0203314, 0, 1, 0, -0.0203314, 0, -0.999794, 5.58299, 0.0990734, -7.78104 )
 
 [node name="SpotLight" type="SpotLight" parent="."]
 transform = Transform( -0.301095, 0.834955, -0.460643, 0.124579, 0.513362, 0.849082, 0.945422, 0.198268, -0.258588, 7.28444, 8.8652, -15.3901 )
 visible = false
+light_color = Color( 0.870588, 0.741176, 0.223529, 1 )
 light_energy = 11.376
 spot_range = 10.3041
 spot_angle = 34.2821
@@ -203,6 +271,30 @@ spot_angle = 34.2821
 autoplay = "aparicion"
 anims/RESET = SubResource( 5 )
 anims/aparicion = SubResource( 6 )
+
+[node name="SpotLight3" type="SpotLight" parent="."]
+transform = Transform( -0.301095, 0.834955, -0.460643, 0.124579, 0.513362, 0.849082, 0.945422, 0.198268, -0.258588, 8.77438, 8.8652, 17.8104 )
+visible = false
+light_energy = 11.376
+spot_range = 10.3041
+spot_angle = 34.2821
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpotLight3"]
+autoplay = "aparicion"
+anims/RESET = SubResource( 13 )
+anims/aparicion = SubResource( 14 )
+
+[node name="SpotLight4" type="SpotLight" parent="."]
+transform = Transform( 0.337056, 0.884456, -0.322694, 0.0222059, 0.335186, 0.94189, 0.941223, -0.324635, 0.0933363, 8.77438, 10.1475, -6.30553 )
+visible = false
+light_energy = 11.376
+spot_range = 10.3041
+spot_angle = 34.2821
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpotLight4"]
+autoplay = "aparicion"
+anims/RESET = SubResource( 15 )
+anims/aparicion = SubResource( 16 )
 
 [node name="SpotLight2" type="SpotLight" parent="."]
 transform = Transform( -0.696961, -0.563803, 0.443139, 0.124579, 0.513362, 0.849082, -0.706205, 0.646983, -0.287555, -1.57743, 12.8988, 2.26742 )
@@ -265,5 +357,10 @@ anims/RESET = SubResource( 12 )
 [node name="Timer" type="Timer" parent="."]
 wait_time = 40.0
 autostart = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.36769, 0 )
+stream = ExtResource( 9 )
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

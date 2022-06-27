@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/y2mate.com - Ambiente de Cementerio  Sonido Ambiente de Terror (1).mp3-2ce676aa03ff35fadc4f3e6df71f1b3e.mp3str"
+
+[deps]
+
+source_file="res://Assets/y2mate.com - Ambiente de Cementerio  Sonido Ambiente de Terror (1).mp3"
+dest_files=[ "res://.import/y2mate.com - Ambiente de Cementerio  Sonido Ambiente de Terror (1).mp3-2ce676aa03ff35fadc4f3e6df71f1b3e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
