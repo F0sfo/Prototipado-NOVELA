@@ -1,6 +1,6 @@
 extends Node2D
 
-
+var music_on = true
 
 
 
@@ -11,4 +11,5 @@ extends Node2D
 
 func _on_Button3_pressed():
 	get_tree().change_scene("res://Mapa/Mapa.tscn")
-	pass # Replace with function body.
+
+
