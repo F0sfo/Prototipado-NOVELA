@@ -90,7 +90,21 @@ var dialogue_2 = [
 		"Expression": "Neutral",
 		"Position": "1",
 		"Choices": ["", ""],
-		"Text": "...Sácame de aquí, por favor, estoy asustado.",
+		"Text": "¿Qué no recuerdas?",
+	},
+	{
+		"Name": " ",
+		"Expression": "Neutral",
+		"Position": "1",
+		"Choices": ["", ""],
+		"Text": "Olvídalo. Este lugar es demasiado-",
+	},
+	{
+		"Name": "Niño",
+		"Expression": "Neutral",
+		"Position": "1",
+		"Choices": ["", ""],
+		"Text": "Sácame de aquí, por favor, estoy asustado.",
 	},
 	{
 		"Name": " ",

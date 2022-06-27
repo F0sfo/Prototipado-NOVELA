@@ -65,7 +65,7 @@ var after_choice_1 = [
 		"Expression": "Neutral",
 		"Position": "1",
 		"Choices": ["", ""],
-		"Text": "¡Hey!hablando de su-",
+		"Text": "¡Hey! hablando de su-",
 	},
 ]
 
