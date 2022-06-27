@@ -1,9 +1,12 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Controller.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tiles/Vector/texture_09.svg" type="Texture" id=2]
 [ext_resource path="res://Niño.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Cajas flotando.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Mapa/Dialogue2.gd" type="Script" id=5]
+[ext_resource path="res://Mapa/Control2.gd" type="Script" id=6]
+[ext_resource path="res://Assets/Oswald-VariableFont_wght.ttf" type="DynamicFontData" id=7]
 
 [sub_resource type="Environment" id=4]
 background_mode = 2
@@ -81,6 +84,48 @@ tracks/0/keys = {
 "values": [ false, true, false, true, false, true, false, true, false, true ]
 }
 
+[sub_resource type="DynamicFont" id=9]
+size = 22
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 26
+outline_size = 1
+outline_color = Color( 0.345098, 0.309804, 0.639216, 0.709804 )
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="Animation" id=11]
+resource_name = "Aparicion"
+length = 14.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 13.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=12]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
 [node name="Mapa" type="Spatial"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -92,16 +137,19 @@ light_energy = 1.274
 
 [node name="CSGBox2" type="CSGBox" parent="."]
 transform = Transform( -0.0135246, -1.00898, 0, 0.447024, -0.0201761, -5.34684e-05, 0.00141803, -6.40017e-05, 22.2719, 13.4261, 8.98486, 0 )
+use_collision = true
 width = 38.5079
 material = SubResource( 1 )
 
 [node name="CSGBox5" type="CSGBox" parent="."]
 transform = Transform( -0.0135368, -1.00894, -0.199021, 0.447024, -0.0201761, -5.34684e-05, 0.00129712, -0.00908018, 22.271, -13.2319, 8.98486, -1.07411 )
+use_collision = true
 width = 38.5079
 material = SubResource( 1 )
 
 [node name="CSGBox3" type="CSGBox" parent="."]
 transform = Transform( 0.00089789, -0.00264857, 14.6512, 0.447024, -0.0201761, -5.34684e-05, 0.0135301, 1.00897, 0.0874603, 0.0471706, 8.98486, -22.4646 )
+use_collision = true
 width = 38.5079
 material = SubResource( 2 )
 
@@ -112,13 +160,14 @@ width = 38.5079
 material = SubResource( 2 )
 
 [node name="CSGBox7" type="CSGBox" parent="."]
-transform = Transform( 0.000568968, -0.00167833, 9.28406, 0.447024, -0.0201761, -5.34684e-05, 0.0135301, 1.00897, 0.0874603, 4.8006, 8.98486, -9.59105 )
+transform = Transform( 0.000568968, -0.00167833, 9.28406, 0.447024, -0.0201761, -5.34684e-05, 0.0135301, 1.00897, 0.0874603, 4.74056, 8.98485, -9.63466 )
 use_collision = true
 width = 38.5079
 material = SubResource( 2 )
 
 [node name="CSGBox4" type="CSGBox" parent="."]
 transform = Transform( 0.0010374, 0.00775879, 14.6513, 0.447024, -0.0201761, -5.34684e-05, 0.0135201, 1.00894, -0.0636671, 0.0471706, 8.98486, 21.0273 )
+use_collision = true
 width = 38.5079
 material = SubResource( 2 )
 
@@ -163,3 +212,49 @@ spot_angle = 55.5005
 autoplay = "aparicion"
 anims/RESET = SubResource( 7 )
 anims/aparicion = SubResource( 8 )
+
+[node name="Dialogue2" type="Node2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="Control2" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 6 )
+
+[node name="TextBox" type="ColorRect" parent="Control2"]
+margin_left = 105.0
+margin_top = 395.0
+margin_right = 922.0
+margin_bottom = 536.0
+color = Color( 0.00784314, 0, 0.0509804, 0.792157 )
+
+[node name="NamePlace" type="ColorRect" parent="Control2/TextBox"]
+margin_top = -28.0
+margin_right = 168.0
+color = Color( 0.0117647, 0, 0.0901961, 0.784314 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control2/TextBox"]
+margin_left = 14.0
+margin_top = 12.0
+margin_right = 803.0
+margin_bottom = 127.0
+custom_fonts/normal_font = SubResource( 9 )
+
+[node name="Tween" type="Tween" parent="Control2/TextBox"]
+playback_speed = 1.5
+playback/speed = 1.5
+
+[node name="Label" type="Label" parent="Control2/TextBox"]
+margin_left = 6.0
+margin_top = -32.0
+margin_right = 126.0
+margin_bottom = 11.0
+custom_colors/font_color = Color( 0.72549, 0.67451, 0.886275, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "Name"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control2"]
+autoplay = "Aparicion"
+anims/Aparicion = SubResource( 11 )
+anims/RESET = SubResource( 12 )
